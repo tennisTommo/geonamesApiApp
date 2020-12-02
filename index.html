@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Postcode Lookup, TimeZone data, Icao Weather data">
+    <meta name="author" content="Paul Thompson">
+    <link rel="shortcut icon" href="images/faviconExample.png">
+
+    <title>Api App, using Ajax, Php, Jquery, Curl</title>
+</head>
+
+<body>
+
+    <table border="1px solid black">
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td>Api Name: Postcode Lookup</td>
+            <td>API Description</td>
+            <td>Submit</td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <select id="selCountry">
+                    <option value="GB">Great Britain</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="US">USA</option>
+                </select>
+                <br><br>
+                <input id="pcode" placeholder="Enter Postcode">Enter Postcode</input>
+            </td>
+            <br>
+            <td>
+                <p>Returns results for country code, county, and town
+                    name. Add a valid postcode for any of the four
+                    countries in the dropdown list. I.E choose France,
+                    and postcode 13000.
+                </p>
+            </td>
+            <td>
+                <button id="postcodebtn"><b>Run Postcode Info</b></button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Results :</td>
+            <td>
+                Country Code: <span id="countryCode"></span>
+                <br>
+                Town Name: <span id="placeName"></span>
+                <br>
+                County: <span id="adminName2"></span>
+            </td>
+
+
+        </tr>
+
+    </table>
+
+    <table border="1px solid black">
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td>Api Name: Weather data</td>
+            <td>API Description</td>
+            <td>Submit</td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <input id="icaoCode">Enter ICAO Code</input>
+            </td>
+            <br>
+            <td>
+                <p>Returns weather data of cloud, humidity,
+                    temperature, and the ICAO station name based on the
+                    ICAO code provided. Try for testing - EGCC, EGFF, EGNT or EGKK.
+                </p>
+            </td>
+            <td>
+                <button id="icaobtn"><b>Run for Weather Info</b></button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Results :</td>
+            <td>
+                Cloud: <span id="clouds"></span>
+                <br>
+                ICAO Station Name: <span id="stationName"></span>
+                <br>
+                Humidity: <span id="humidity"></span>
+                <br>
+                Temperature: <span id="temperature"></span>
+
+
+            </td>
+
+
+        </tr>
+
+    </table>
+
+    <table border="1px solid black">
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td>Api Name: Ocean Name</td>
+            <td>API Description</td>
+            <td>Submit</td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <input id="longitude">Longitude</input>
+                <br>
+                <input id="latitude">Latitude</input>
+            </td>
+            <br>
+            <td>
+                <p>Returns the name of the ocean based on the long and
+                    lat cordinates data you input. Try long:-123 and lat:26, or long:0 and lat:65.
+                </p>
+            </td>
+            <td>
+                <button id="oceanbtn"><b>Run Ocean Info</b></button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Results :</td>
+            <td>
+                Name: <p id="name"></p>
+                <br>
+            </td>
+
+
+        </tr>
+
+    </table>
+
+
+
+    <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+    <script type="application/javascript" src="libs/js/script.js"></script>
+
+</body>
+
+</html>
